@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import { download } from '@sebas/open-book-api';
-import { API_KEY } from '$env/static/private';
+import { API_KEY } from '$env/dynamic/private';
 import type { RequestHandler } from './$types';
 
 export const POST: RequestHandler = async ({ request }) => {
