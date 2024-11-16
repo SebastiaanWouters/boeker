@@ -80,7 +80,7 @@
 			<input name="search" type="search" bind:value={query} placeholder="Search" />
 			<input type="submit" value="Search" />
 		</fieldset>
-		<div class="grid">
+		<div style="padding-left: 0.25rem;" class="grid">
 			<fieldset>
 				<legend>Content type:</legend>
 				<input type="radio" id="book" name="content-type" checked />
@@ -90,13 +90,13 @@
 			</fieldset>
 		</div>
 		{#if isSearching}
-			<span style="margin-bottom: 1rem; display: inline-block;" aria-busy="true">Searching...</span>
+			<span style="margin-bottom: 1rem; display: inline-block; padding-left: 0.25rem;" aria-busy="true">Searching...</span>
 		{/if}
 		<div
-			style="width: 100%; height: 0.07rem; background-color: var(--pico-muted-color); opacity: 0.6; border-radius: 8px;"
+			style="width: 100%; height: 0.07rem; padding-left: 0.25rem; background-color: var(--pico-muted-color); opacity: 0.6; border-radius: 8px;"
 		></div>
 	</form>
-	<div style="max-width: 100%;">
+	<div style="max-width: 100%; padding-left: 0.25rem;">
 		{#if list.length > 0}
 			{#each list as item, i (item.md5)}
 				<div style="display:flex; margin-bottom: 2rem; max-width: 100%;">

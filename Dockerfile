@@ -17,7 +17,7 @@ COPY . .
 RUN bun run build
 
 # Expose port
-EXPOSE 4173
+EXPOSE 3000
 
 # Start the application
-CMD ["bun", "run", "preview", "--host"] 
+CMD ["bun", "run", "./build/index.js"] 
