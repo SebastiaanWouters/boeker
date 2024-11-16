@@ -11,3 +11,4 @@ services:
       - NODE_ENV=production
       - BUN_ENV=production
       - API_KEY=${API_KEY}
+      - HOST=${HOST:-0.0.0.0}
