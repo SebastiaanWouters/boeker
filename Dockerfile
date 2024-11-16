@@ -20,4 +20,4 @@ RUN bun run build
 EXPOSE 3000
 
 # Start the application
-CMD ["bun", "run", "./build/index.js"] 
+CMD ["bun", "run", "/app/build/index.js"] 
