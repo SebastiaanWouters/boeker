@@ -116,6 +116,18 @@
 								style="object-fit: cover; min-height: 100%;"
 							/>
 						</div>
+					{:else}
+						<div
+							id="img"
+							data-id={i}
+							style="flex: 1 0 140px; width: auto; height: 100%; overflow: hidden; border: 1px solid #33333322; border-radius: 0.25rem 0px 0px 0.25rem;"
+						>
+							<img
+								src="https://diybookcovers.com/wp-content/uploads/2023/07/nonfiction12.jpg"
+								alt="cover"
+								style="object-fit: cover; min-height: 100%;"
+							/>
+						</div>
 					{/if}
 					<article
 						bind:this={dom_articles[i]}
@@ -123,17 +135,17 @@
 						style="flex: 99 1 0%; height: fit-content; margin-bottom: 0rem;"
 					>
 						{#if item.author}
-							<header style="font-size: 0.9rem;">{item.author}</header>
+							<header style="font-size: 0.9rem; color: var(--pico-contrast)">{item.author}</header>
 						{/if}
 						<div
 							id="content"
 							style="display:flex; justify-content: space-between; gap: 1rem; flex: 1 0 0%"
 						>
-							<h5 style="color: white;">{item.title}</h5>
+							<h5 style="color: var(--pico-primary);">{item.title}</h5>
 							<button
 								aria-busy={isLoading[i] ? 'true' : 'false'}
 								style="height: fit-content;"
-								class="secondary outline"
+								class="contrast outline"
 								onclick={() =>
 									download(
 										item.doi ? item.doi : item.md5,
@@ -143,7 +155,7 @@
 									)}>Download</button
 							>
 						</div>
-						<footer id="meta">{item.meta}</footer>
+						<footer style="font-size: 0.85rem; line-height: 1.25;" id="meta">{item.meta}</footer>
 					</article>
 				</div>
 			{/each}
